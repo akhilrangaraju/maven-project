@@ -1,1 +1,1 @@
-Hello, World Automated Pipeline!
+Hello, World Automated Pipeline v1.0!
