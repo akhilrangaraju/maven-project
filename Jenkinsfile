@@ -52,21 +52,8 @@ pipeline {
 
                 stage('Deploy to PROD'){
                     steps{
-                        timeout(time:5, unit:'DAYS'){
-                            input message: 'Approve PROD deployment?'
-                        }
-
                         sh "docker cp **/target/*.war 97a9af5ffaf0:/webapps"
-                    }
-                    post{
-                        success {
-                            echo 'Deployment to Production Successful'
-                        }
-                        failure {
-                            echo 'Deployment to Production Failed'
-                        }
-                    }
-                    
+                    }                
                 }
             }
         }
