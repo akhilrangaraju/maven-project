@@ -46,13 +46,13 @@ pipeline {
             parallel{
                 stage('Deploy to QA'){
                     steps{
-                        sh "docker cp **/target/*.war cc66f428534e:/webapps"
+                        sh "docker cp **/target/*.war cc66f428534e:/usr/local/tomcat/webapps/webapp.war"
                     }
                 }
 
                 stage('Deploy to PROD'){
                     steps{
-                        sh "docker cp **/target/*.war 97a9af5ffaf0:/webapps"
+                        sh "docker cp **/target/*.war 97a9af5ffaf0:/usr/local/tomcat/webapps/webapp.war"
                     }                
                 }
             }
