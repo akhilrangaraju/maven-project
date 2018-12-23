@@ -12,10 +12,11 @@ pipeline{
                 }
             }
         }
-    }
-    stage('deploy to Staging'){
-        steps{
+          stage('Deploy to Staging'){
+            steps{
             build job: 'deploy-to-staging'
         }
     }
+    }
+    
 }
