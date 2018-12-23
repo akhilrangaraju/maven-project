@@ -52,7 +52,7 @@ pipeline {
 
                 stage('Deploy to PROD'){
                     steps{
-                        timeout(time:5, units:'DAYS'){
+                        timeout(time:5, unit:'DAYS'){
                             input message: 'Approve PROD deployment?'
                         }
 
